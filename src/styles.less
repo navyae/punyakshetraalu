@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+@mobile:      ~"(max-width: 767px)";  // < 768px   bootstrap: sm
+@tablet:      ~"(min-width: 768px)";  // > 768px   bootstrap: md
+@desktop-m:   ~"(min-width: 992px)";  // > 992px   bootstrap: lg
+@desktop-l:   ~"(min-width: 1280px)"; // > 1280px  bootstrap: xl
+
+/* fonts */
+
+.universalFont(@fontSize, @fontFamily, @fontWeight, @color){
+  font-size: @fontSize;
+  font-family: @fontFamily;
+  font-weight: @fontWeight;
+  color: @color;
+}
+
+.createBox(@boxWidth,@boxHeight){
+  width: @boxWidth;
+  height: @boxHeight;
+}
+@punyakshetraalu-brand: #664b00;
+@punyakshetraalu-text: #664b00;

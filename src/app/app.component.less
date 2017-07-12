@@ -1,0 +1,135 @@
+@import (reference) "../styles";
+
+.punya_bg{
+  width:100%;
+  height:100%;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  .jumbotron {
+    background-color:transparent !important;
+  }
+
+  &-bar{
+    .createBox(60%, 50px);
+    //background-color: aliceblue;
+    margin: auto;
+    @media @mobile{
+      .createBox(75%, 50px);
+    }
+
+  }
+
+  &-title{
+    .createBox(100%, 80px);
+    .universalFont(40px, fantasy, 700, white);
+    text-align: center;
+
+    &-icon{
+      .createBox(50px,50px);
+      float: left;
+      display: block;
+      background-color: white;
+      background: url("../assets/p_icon.jpg");
+      background-size: 100% 100%;
+      @media @mobile{
+        .createBox(40px, 40px);
+      }
+    }
+
+    &-text{
+      width: 80%;
+      height: 100%;
+      float: left;
+      margin-left: 10px;
+
+      @media @mobile{
+        .createBox(75%, 100%)
+      }
+
+      &-first{
+        .createBox(100%, 60%);
+        .universalFont(20px, -webkit-pictograph, 700, white);
+        text-align: left;
+
+        @media @mobile{
+          .createBox(100%, 50%);
+          .universalFont(16px, -webkit-pictograph, 700, white);
+        }
+
+      }
+
+      &-second{
+        .createBox(100%, 40%);
+        .universalFont(14px, fantasy, 700, white);
+        text-align: left;
+        @media @mobile{
+          .createBox(100%, 50%);
+          .universalFont(12px, fantasy, 700, white);
+        }
+      }
+    }
+  }
+
+  &-navbar{
+    .createBox(100%, 40px);
+    color: antiquewhite;
+    background-color: @punyakshetraalu-brand;
+    @media @mobile{
+      .createBox(100%, 35px);
+    }
+
+    &-dropdown{
+      .createBox(35px, 100%);
+      float: left;
+      color: antiquewhite;
+      text-align: center;
+      font-size: 25px;
+      @media @desktop-m{
+        display:none;
+      }
+    }
+
+    &-tabs{
+      padding: 10px 0;
+      .createBox(60%, 100%);
+      float: left;
+      li{
+        margin-left: 25px;
+        cursor: pointer;
+      }
+      ul{
+        margin-left: 25px;
+      }
+    @media @mobile{
+      display: none;
+    }
+    }
+
+    &-contact{
+      padding: 10px 0;
+      .createBox(40%, 100%);
+      float: right;
+      li{
+        margin-left: 15px;
+      }
+      @media @mobile{
+        .createBox(70%, 100%);
+        .nav-item:nth-of-type(2){
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  &-component{
+    width: 100%;
+  }
+
+
+
+}
+
+
+

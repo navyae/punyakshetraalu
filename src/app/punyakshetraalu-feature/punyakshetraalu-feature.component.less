@@ -1,0 +1,54 @@
+@import (reference) "../../styles";
+
+.pf{
+.createBox(100%, 500px);
+  &-img{
+    .createBox(50%, 100%);
+    background-color: antiquewhite;
+    float: left;
+  }
+  &-subimg{
+    .createBox(50%, 100%);
+    float: right;
+
+    &-gal{
+      .createBox(100%, 50%);
+      &-images{
+        overflow: hidden;
+        float: left;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &-title{
+      .createBox(100%, 50%);
+      background-color: white;
+      padding: 15px;
+      &-head{
+        .createBox(100%, 50px);
+        .universalFont(24px, cursive, 700, @punyakshetraalu-brand);
+        text-align: center;
+      }
+      &-desc{
+        .createBox(100%, 125px);
+        .universalFont(18px, cursive, 400, @punyakshetraalu-brand);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: pre-wrap;
+      }
+      &-btn{
+        .createBox(100%, 40px);
+        .universalFont(18px, fantasy, 700, white);
+        text-align: center;
+        line-height: 2em;
+        margin-top: 10px;
+        background-color: @punyakshetraalu-brand;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+  }
+}

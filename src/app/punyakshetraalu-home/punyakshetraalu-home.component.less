@@ -1,0 +1,170 @@
+@import (reference) "../../styles";
+.p_home{
+  &-explore{
+    .createBox(80%, auto);
+    padding: 20px 0;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+
+    &-fl{
+      .universalFont(24px, fantasy, 500, antiquewhite);
+      @media @mobile{
+        .universalFont(20px, fantasy, 500, antiquewhite);
+      }
+    }
+    &-sl{
+      .universalFont(100px, cursive, 700, #755D19);
+      @media @mobile{
+        .universalFont(60px, cursive, 700, #755D19);
+      }
+
+    }
+    &-tl{
+      .createBox(100%, 100px);
+      padding: 15px;
+      margin: auto;
+      font-size: 16px;
+      font-family: fantasy;
+      overflow: hidden;
+      @media @mobile{
+        .createBox(100%, 250px);
+      }
+
+    }
+  }
+  &-imcar{
+    .createBox(100%, 500px);
+    overflow: hidden;
+    transition: all 2s linear;
+    .carousel{
+      height:100%;
+    }
+    .glyphicon{
+      cursor: pointer;
+    }
+    //background-color: #664b00;
+  }
+
+  &-wrw{
+
+    //who are we component
+    @media @mobile{
+      .createBox(100%, 550px);
+      padding:15px 0;
+    }
+    @media @tablet{
+      .createBox(100%, 500px);
+    }
+    @media @desktop-m{
+      .createBox(100%, 600px);
+    }
+
+    background-color: white;
+    display: block;
+    &-cen{
+      overflow: hidden;
+      margin: auto;
+      @media @mobile{
+        .createBox(300px, 100%);
+        //border: 1px solid #000;
+      }
+      @media @tablet{
+        .createBox(700px, 100%)
+      }
+      @media @desktop-m{
+        .createBox(900px, 100%)
+      }
+
+    }
+
+    &-img{
+      background: url("../../assets/p_icon.jpg");
+      background-size: 100% 100%;
+      opacity:0.6;
+      transition-delay: 2s;
+      transition: width 2s;
+      @media @mobile{
+        .createBox(300px, 250px);
+      }
+
+      @media @tablet{
+        .createBox(400px, 300px);
+        float: left;
+        margin: 100px 0;
+        //opacity:0.6;
+      }
+      @media @desktop-m{
+        .createBox(500px, 400px);
+        float: left;
+        margin: 100px 0;
+        //opacity:0.6;
+      }
+
+    }
+
+    &-text{
+      //background: url('../../assets/india.png');
+      background-size: 100% 100%;
+      background-color: black;
+      @media @mobile{
+        .createBox(300px, 300px);
+      }
+      @media @tablet{
+        .createBox(300px, 300px);
+        float: left;
+        margin: 100px 0;
+      }
+      @media @desktop-m{
+        .createBox(400px, 400px);
+        float: left;
+        margin: 100px 0;
+      }
+
+
+
+
+      &-head{
+        text-align: center;
+        line-height: 3em;
+        @media @mobile{
+          .universalFont(30px, cursive, 700, #755019)
+        }
+        @media @tablet{
+          .universalFont(35px, cursive, 700, #755019)
+        }
+        @media @desktop-m{
+          .universalFont(50px, cursive, 700, #755019)
+        }
+
+
+      }
+      &-bod{
+        width: 80%;
+        margin: auto;
+        height: 200px;
+        font-size: 16px;
+        overflow: hidden;
+        text-align: center;
+        font-family: fantasy;
+      }
+
+    }
+  }
+
+  &-articles{
+    width: 100%;
+    height: 1500px;
+    display: block;
+    background-color: black;
+  }
+
+  &-contact{
+    width: 100%;
+    height: 500px;
+    display: block;
+    background-color: black;
+  }
+
+
+}
