@@ -1,0 +1,48 @@
+@import (reference) "../../styles";
+
+.carouselImage{
+  position: relative;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+  &-btns{
+    position: absolute;
+    bottom: 0px;
+    .createBox(100%, 50px);
+
+    &-sm_container{
+      .createBox(250px, 100%);
+      background-color: black;
+      opacity: 0.8;
+      margin: auto;
+
+      &-count{
+        .createBox(150px, 100%);
+        .universalFont(24px, fantasy, 700px, white);
+        float: left;
+        text-align: center;
+        padding-top: 13px;
+
+      }
+    }
+    &-btn_left{
+      .createBox(50px, 50px);
+      .universalFont(35px, Arial, 700, White );
+      float: left;
+      text-align: center;
+      cursor: pointer;
+    }
+    &-btn_right{
+      .createBox(50px, 50px);
+      .universalFont(35px, Arial, 700, White );
+      float: right;
+      text-align: center;
+      cursor: pointer;
+    }
+
+  }
+
+}
+

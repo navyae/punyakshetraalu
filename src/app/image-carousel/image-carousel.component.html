@@ -1,0 +1,18 @@
+<div class = "carouselImage">
+  <img [src]="_DomSanitizationService.bypassSecurityTrustUrl(featureImage)" #carouselCurrentImage />
+  <div class="carouselImage-btns">
+    <div class="carouselImage-btns-sm_container">
+      <div class="carouselImage-btns-btn_left" (click)="prevImage($event)">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </div>
+      <div class="carouselImage-btns-sm_container-count">
+        Image {{displayId}} of {{totalImages}}
+      </div>
+      <div class="carouselImage-btns-btn_right" (click)="nextImage($event)">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </div>
+
+    </div>
+  </div>
+
+</div>

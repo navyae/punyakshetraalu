@@ -33,9 +33,6 @@ export class PunyakshetraaluFeatureComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.galleryImageWidth = this.ImagesArray.length > 3 ? Math.floor(this.articlesGallery.nativeElement.offsetWidth / 3) : Math.floor(this.articlesGallery.nativeElement.offsetWidth / this.ImagesArray.length);
     this.galleryImageHeight = this.ImagesArray.length > 3 ? this.articlesGallery.nativeElement.offsetHeight / 2 : this.articlesGallery.nativeElement.offsetHeight;
-    console.log(this.articlesGallery.nativeElement)
-    console.log(this.galleryImageWidth, this.galleryImageHeight);
-
     this.imageQueryList = this.eachImage.toArray();
     const self = this;
     this.imageQueryList.forEach(function (ele) {
