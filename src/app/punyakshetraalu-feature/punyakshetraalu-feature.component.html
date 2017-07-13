@@ -5,7 +5,7 @@
   <div class = "pf-subimg">
     <div class="pf-subimg-gal" #articleGallery>
       <div class="pf-subimg-gal-images" #eachImage *ngFor="let item of ImagesArray; let i = index">
-        <div id = img-{{i+1}}>
+        <div id = img-{{i+1}} class="pf-subimg-gal-eachImg">
           <img [src]= "_DomSanitizationService.bypassSecurityTrustUrl(item)"/>
 
         </div>
