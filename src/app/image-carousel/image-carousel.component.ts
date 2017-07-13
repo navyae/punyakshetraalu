@@ -1,4 +1,7 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {
+  AfterViewInit, Component, ElementRef, Input, Output, OnChanges, OnInit, Renderer2, ViewChild,
+  EventEmitter
+} from '@angular/core';
 import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
@@ -10,6 +13,7 @@ export class ImageCarouselComponent implements OnInit, AfterViewInit {
   @ViewChild('carouselCurrentImage') carouselCurrentImage:ElementRef;
 
   @Input() imageArray: Array<any>;
+  @Output() emitImageId: EventEmitter<any> = new EventEmitter();
   initImageId = 0;
   displayId = this.initImageId+1;
   totalImages;
@@ -31,6 +35,7 @@ export class ImageCarouselComponent implements OnInit, AfterViewInit {
       this.initImageId--;
       this.displayId = this.initImageId+1;
       this.featureImage = this.imageArray[ this.initImageId ];
+      this.emitImageId.emit(this.displayId);
 
     }
 
@@ -41,6 +46,7 @@ export class ImageCarouselComponent implements OnInit, AfterViewInit {
       this.initImageId++;
       this.displayId = this.initImageId+1;
       this.featureImage = this.imageArray[ this.initImageId ];
+      this.emitImageId.emit(this.displayId);
 
     }
 

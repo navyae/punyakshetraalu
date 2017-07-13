@@ -1,11 +1,14 @@
 <div class="pf">
   <div class="pf-img">
-    <app-image-carousel [imageArray] = "ImagesArray"></app-image-carousel>
+    <app-image-carousel [imageArray] = "ImagesArray" (emitImageId)="onEmitImageId($event)"></app-image-carousel>
   </div>
   <div class = "pf-subimg">
     <div class="pf-subimg-gal" #articleGallery>
-      <div class="pf-subimg-gal-images" #eachImage *ngFor="let item of ImagesArray">
-        <img [src]= "_DomSanitizationService.bypassSecurityTrustUrl(item)"/>
+      <div class="pf-subimg-gal-images" #eachImage *ngFor="let item of ImagesArray; let i = index">
+        <div id = img-{{i+1}}>
+          <img [src]= "_DomSanitizationService.bypassSecurityTrustUrl(item)"/>
+
+        </div>
       </div>
     </div>
     <div class="pf-subimg-title">
