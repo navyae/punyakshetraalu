@@ -24,7 +24,7 @@ export class PunyakshetraaluFeatureComponent implements AfterViewInit {
     ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpaGi6qpGc4fyi2WZSj6UT3ay0pHm17bHjoD3TWG5I8xraK4Wm ',
   ];
   imageQueryList: Array<any>;
-  ImageCount = 6;
+  ImageCount = this.ImagesArray.length;
   galleryImageWidth;
   galleryImageHeight;
   imageId = 1;
