@@ -1,7 +1,16 @@
 <div class="p_article_lists" *ngFor="let eachArticle of articlesList">
 
-    <div class="p_article_lists-img">
-        <img [src]="_DomSanitizationService.bypassSecurityTrustUrl(eachArticle.articleImage)" />
-    </div>
+  <div class="p_article_lists-img">
+    <img [src]="_DomSanitizationService.bypassSecurityTrustUrl(eachArticle.articleImage)" />
+  </div>
+  <div class="p_article_lists-title">
+    {{eachArticle.articleTitle}}
+  </div>
+  <div class="p_article_lists-body">
+    {{eachArticle.articleContent}}
+  </div>
+  <div class="p_article_lists-btn">
+    Read More ...
+  </div>
 
 </div>

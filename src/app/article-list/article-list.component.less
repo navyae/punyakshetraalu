@@ -20,4 +20,35 @@
       .createBox(100%, 100%);
     }
   }
+  &-title{
+    .createBox(90%, 50px);
+    margin: auto;
+    .universalFont(18px, cursive, 700, white);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.35em;
+  }
+  &-body{
+    .createBox(90%,120px);
+    margin: auto;
+    .universalFont(14px, fantasy,400, white);
+    text-overflow: ellipsis;
+    line-height: 1.72em;
+    overflow: hidden;
+    text-align: justify;
+    &:first-letter{
+      font-size: 2em;
+
+    }
+
+  }
+  &-btn{
+    .createBox(auto,25px);
+    .universalFont(14px, cursive, 700, white);
+    background-color: black;
+    line-height: 2em;
+    margin: auto;
+    text-align: center;
+  }
 }
