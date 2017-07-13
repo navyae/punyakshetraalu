@@ -1,18 +1,46 @@
 @import (reference) "../../styles";
 
 .pf{
-.createBox(100%, 500px);
+  @media @mobile{
+    .createBox(100%, 1000px);
+  }
+
+  @media @tablet{
+    .createBox(100%, 1000px);
+  }
+
+  @media @desktop-m{
+    .createBox(100%, 500px);
+  }
+
   margin: 0 0 15px 0;
   background-color: white !important;
   &-img{
-    .createBox(50%, 100%);
-    float: left;
+    @media @mobile{
+      .createBox(100%, 40%);
+    }
+    @media @tablet{
+      .createBox(100%, 40%);
+    }
+    @media @desktop-m{
+      .createBox(50%, 100%);
+      float: left;
+    }
     overflow: hidden;
 
   }
   &-subimg{
-    .createBox(50%, 100%);
-    float: right;
+    @media @mobile{
+      .createBox(100%, 60%);
+    }
+    @media @tablet{
+      .createBox(100%, 60%);
+    }
+    @media @desktop-m{
+      .createBox(50%, 100%);
+      float: right;
+    }
+
 
     &-gal{
       .createBox(100%, 50%);
