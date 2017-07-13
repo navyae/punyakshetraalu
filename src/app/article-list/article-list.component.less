@@ -1,0 +1,23 @@
+@import (reference) "../../styles";
+
+.p_article_lists{
+  .createBox(265px, 400px);
+  background-color: @punyakshetraalu-brand;
+  border: 3px solid @punyakshetraalu-brand;
+  margin: 15px;
+  float: left;
+
+  &-each{
+    .createBox(265px, 400px);
+    background-color: #755019;
+    margin: auto;
+  }
+  &-img{
+    .createBox(100%, 50%);
+    border-bottom: 1px solid black;
+    overflow: hidden;
+    img{
+      .createBox(100%, 100%);
+    }
+  }
+}

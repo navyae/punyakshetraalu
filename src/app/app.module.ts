@@ -11,6 +11,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { PunyakshetraaluFeatureComponent } from './punyakshetraalu-feature/punyakshetraalu-feature.component';
 import { SafePipePipe } from './safe-pipe.pipe';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
+import { ArticleListComponent } from './article-list/article-list.component';
 
 const punyaRoute: Routes = [
   {
@@ -32,6 +33,7 @@ const punyaRoute: Routes = [
     PunyakshetraaluFeatureComponent,
     SafePipePipe,
     ImageCarouselComponent,
+    ArticleListComponent,
   ],
   imports: [
     BrowserModule,

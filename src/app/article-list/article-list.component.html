@@ -1,0 +1,7 @@
+<div class="p_article_lists" *ngFor="let eachArticle of articlesList">
+
+    <div class="p_article_lists-img">
+        <img [src]="_DomSanitizationService.bypassSecurityTrustUrl(eachArticle.articleImage)" />
+    </div>
+
+</div>
