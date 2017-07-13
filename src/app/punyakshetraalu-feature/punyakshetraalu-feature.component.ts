@@ -14,6 +14,7 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class PunyakshetraaluFeatureComponent implements AfterViewInit {
   @ViewChild('articleGallery') private articlesGallery: ElementRef;
   @ViewChildren('eachImage', { read: ElementRef}) private eachImage: QueryList<any>;
+  @ViewChild('img-1') private activeImage: ElementRef;
   ImagesArray = [
     ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6fQ1tiy0aQJIMeV2U8M_-vDvxdbZ0KgK8vZ6gzgoya8Yiazn9 ',
     ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo52czfI-t5GmRUwWxE-W5C2oLhKes3bkIyTCVeHkDNMT7M-R_ ',
@@ -26,6 +27,7 @@ export class PunyakshetraaluFeatureComponent implements AfterViewInit {
   ImageCount = 6;
   galleryImageWidth;
   galleryImageHeight;
+  imageId = 1;
   constructor( private eref: ElementRef, private render: Renderer2, private _DomSanitizationService: DomSanitizer ) {
 
   }
@@ -39,8 +41,27 @@ export class PunyakshetraaluFeatureComponent implements AfterViewInit {
 
       self.render.setStyle(ele.nativeElement, 'width', self.galleryImageWidth + 'px');
       self.render.setStyle(ele.nativeElement, 'height', self.galleryImageHeight + 'px');
-    })
+    });
 
+    this.render.setStyle(this.eref.nativeElement.querySelector('#img-1'), "border", '2px solid blue');
+  }
+  onEmitImageId(e){
+    var prevImageId = this.imageId > e ? this.imageId : e - 1;
+    this.imageId = e;
+    var EmitImage = '#img-' + this.imageId;
+    var prevEmitImage = '#img-' + prevImageId;
+    this.removeBorder(prevEmitImage);
+    this.addBorder(EmitImage);
+
+  }
+
+  removeBorder(ele){
+    this.render.setStyle(this.eref.nativeElement.querySelector(ele), "border", '2px solid #664b00');
+
+  }
+
+  addBorder(ele){
+    this.render.setStyle(this.eref.nativeElement.querySelector(ele), "border", '2px solid blue');
   }
 
 
