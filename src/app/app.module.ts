@@ -10,6 +10,7 @@ import { PunyaBlogComponent } from './punya-blog/punya-blog.component';
 import {RouterModule, Routes} from '@angular/router';
 import { PunyakshetraaluFeatureComponent } from './punyakshetraalu-feature/punyakshetraalu-feature.component';
 import { SafePipePipe } from './safe-pipe.pipe';
+import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 
 const punyaRoute: Routes = [
   {
@@ -29,7 +30,8 @@ const punyaRoute: Routes = [
     PunyakshetraaluContactComponent,
     PunyaBlogComponent,
     PunyakshetraaluFeatureComponent,
-    SafePipePipe
+    SafePipePipe,
+    ImageCarouselComponent,
   ],
   imports: [
     BrowserModule,
