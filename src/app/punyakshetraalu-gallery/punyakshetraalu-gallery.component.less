@@ -1,0 +1,30 @@
+@import (reference) "../../styles";
+
+.pg{
+  .createBox(100%, auto);
+  &-dd{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    padding-right: 20px;
+  }
+  &-tiles{
+    .createBox(100%, auto);
+    display: inline-block;
+    padding: 10px;
+    &-wrapper{
+      .createBox(980px, auto);
+      margin: auto;
+    }
+    &-each{
+      cursor: pointer;
+      .createBox(200px, 200px);
+      background-color: @punyakshetraalu-brand;
+      margin: 10px;
+      float: left;
+      img{
+        .createBox(100%, 100%)
+      }
+    }
+  }
+}
