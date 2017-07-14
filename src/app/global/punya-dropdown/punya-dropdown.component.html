@@ -1,0 +1,10 @@
+
+<div class="dropdwn-container" #dcontainer>
+  <button class="p-dropdown" #dropdownButton (click)="dropdownToggle($event)">
+    {{currentCategory}}
+    <i class="fa fa-caret-down" aria-hidden="true"></i>
+  </button>
+  <div class="p-dropdown-list" #dropdownListStyle>
+    <div class="p-dropdown-list-each" *ngFor="let category of dropdownList"> {{category}} </div>
+  </div>
+</div>

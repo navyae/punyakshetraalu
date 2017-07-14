@@ -12,6 +12,9 @@ import { PunyakshetraaluFeatureComponent } from './punyakshetraalu-feature/punya
 import { SafePipePipe } from './safe-pipe.pipe';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 import { ArticleListComponent } from './article-list/article-list.component';
+import { PunyaBhagavadGitaComponent } from './punya-bhagavad-gita/punya-bhagavad-gita.component';
+import { PunyakshetraaluGalleryComponent } from './punyakshetraalu-gallery/punyakshetraalu-gallery.component';
+import { PunyaDropdownComponent } from './global/punya-dropdown/punya-dropdown.component';
 
 const punyaRoute: Routes = [
   {
@@ -21,7 +24,20 @@ const punyaRoute: Routes = [
   {
     path: 'stories',
     component: PunyaBlogComponent
+  },
+  {
+    path: 'bhagavadgita',
+    component: PunyaBhagavadGitaComponent
+  },
+  {
+    path:'about',
+    component:PunyakshetraaluAboutComponent
+  },
+  {
+    path:'gallery',
+    component: PunyakshetraaluGalleryComponent
   }
+
 ]
 @NgModule({
   declarations: [
@@ -34,6 +50,9 @@ const punyaRoute: Routes = [
     SafePipePipe,
     ImageCarouselComponent,
     ArticleListComponent,
+    PunyaBhagavadGitaComponent,
+    PunyakshetraaluGalleryComponent,
+    PunyaDropdownComponent,
   ],
   imports: [
     BrowserModule,
