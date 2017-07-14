@@ -1,0 +1,35 @@
+@import (reference) "../../../styles";
+.dropdwn-container{
+  height: auto;
+  display: inline-block;
+  margin:10px;
+}
+.p-dropdown{
+  .universalFont(20px, cursive,700, white);
+  background-color: @punyakshetraalu-brand;
+  text-align: right;
+
+  i{
+    margin: 5px;
+  }
+  &-list{
+    display: none;
+    height: auto;
+    overflow: scroll;
+    min-height: 30px;
+    max-height: 200px;
+    &-each{
+      .createBox(100%, 30px);
+      text-align: center;
+      .universalFont(20px, cursive, 500, black);
+      background-color: white;
+      border: 1px solid @punyakshetraalu-brand;
+      cursor: pointer;
+      &:hover{
+        border: 1px solid deepskyblue;
+
+      }
+    }
+    //display: none;
+  }
+}

@@ -43,7 +43,7 @@ export class PunyakshetraaluFeatureComponent implements AfterViewInit {
       self.render.setStyle(ele.nativeElement, 'height', self.galleryImageHeight + 'px');
     });
 
-    this.render.setStyle(this.eref.nativeElement.querySelector('#img-1'), "border", '4px solid white');
+    this.render.setStyle(this.eref.nativeElement.querySelector('#img-1'), "border", '2px solid deepskyblue');
   }
   onEmitImageId(e){
     var prevImageId = this.imageId > e ? this.imageId : e - 1;
@@ -56,12 +56,12 @@ export class PunyakshetraaluFeatureComponent implements AfterViewInit {
   }
 
   removeBorder(ele){
-    this.render.setStyle(this.eref.nativeElement.querySelector(ele), "border", '4px solid #664b00');
+    this.render.setStyle(this.eref.nativeElement.querySelector(ele), "border", '2px solid #664b00');
 
   }
 
   addBorder(ele){
-    this.render.setStyle(this.eref.nativeElement.querySelector(ele), "border", '4px solid white');
+    this.render.setStyle(this.eref.nativeElement.querySelector(ele), "border", '2px solid deepskyblue');
   }
 
 

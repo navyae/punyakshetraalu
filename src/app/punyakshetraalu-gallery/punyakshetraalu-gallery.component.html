@@ -1,0 +1,15 @@
+
+<div class="pg">
+  <div class="pg-dd">
+    <app-punya-dropdown [dropdownWidth] = 'dropdownWidth' [dropdownHeight] = 'dropdownHeight' [dropdownList]="dropdownList"></app-punya-dropdown>
+  </div>
+  <div class="pg-tiles">
+    <div class="pg-tiles-wrapper">
+      <div class = "pg-tiles-each" *ngFor=" let eImage of galleryImages">
+          <img [src]="_DomSanitizationService.bypassSecurityTrustUrl(eImage.galleryImage)"/>
+      </div>
+    </div>
+
+  </div>
+</div>
+
