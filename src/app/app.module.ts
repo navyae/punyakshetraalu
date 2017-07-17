@@ -15,6 +15,7 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { PunyaBhagavadGitaComponent } from './punya-bhagavad-gita/punya-bhagavad-gita.component';
 import { PunyakshetraaluGalleryComponent } from './punyakshetraalu-gallery/punyakshetraalu-gallery.component';
 import { PunyaDropdownComponent } from './global/punya-dropdown/punya-dropdown.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 const punyaRoute: Routes = [
   {
@@ -57,7 +58,8 @@ const punyaRoute: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(punyaRoute)
+    RouterModule.forRoot(punyaRoute),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
