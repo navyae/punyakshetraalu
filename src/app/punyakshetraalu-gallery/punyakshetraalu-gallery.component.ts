@@ -1,19 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewChecked, AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
 import {DomSanitizer} from "@angular/platform-browser";
+import {createElement} from "@angular/core/src/view/element";
 
 @Component({
   selector: 'app-punyakshetraalu-gallery',
   templateUrl: './punyakshetraalu-gallery.component.html',
-  styleUrls: ['./punyakshetraalu-gallery.component.less']
+  styleUrls: ['./punyakshetraalu-gallery.component.less'],
+
 })
 export class PunyakshetraaluGalleryComponent implements OnInit {
+
   dropdownWidth = '200px';
   dropdownHeight = '40px';
   dropdownList = ['Images', 'Videos'];
-  constructor( private _DomSanitizationService: DomSanitizer) { }
+  constructor( private _DomSanitizationService: DomSanitizer, private eref: ElementRef, private render:Renderer2) { }
 
   ngOnInit() {
   }
+
   galleryImages = [
     {
       galleryImage: " http://24.media.tumblr.com/tumblr_lxnj8pUbMr1rn5fn8o1_500.jpg "
@@ -212,5 +216,33 @@ export class PunyakshetraaluGalleryComponent implements OnInit {
       galleryImage: " http://68.media.tumblr.com/0138c661da419617cbc11564e7863921/tumblr_miicofnhUQ1rmprfqo1_500.jpg "
     }
   ];
+
+  expandImage(e,i){
+
+    var existingExpandImage = this.eref.nativeElement.querySelector('#expandImage');
+    if(existingExpandImage!=null){
+      existingExpandImage.parentElement.removeChild(existingExpandImage);
+    }
+    var imageNum;
+    if(i % 4 ===0){
+        imageNum = i;
+    }else{
+      imageNum = Math.floor(i/4) * 4;
+    }
+
+    var parentWrapper = e.target.parentElement.parentNode;
+    var eid = '#img-'+imageNum;
+    var siblingElement = this.eref.nativeElement.querySelector(eid);
+    var clickedImageId = e.target.parentElement.id;
+
+    var expandImage = this.render.createElement('div');
+    expandImage.id='expandImage';
+    expandImage.style.display = 'inline-block';
+    var imageTag = this.render.createElement('img');
+    this.render.setAttribute(imageTag,'src', e.target.src);
+    this.render.appendChild(expandImage, imageTag);
+    this.render.insertBefore(parentWrapper, expandImage, siblingElement);
+
+  }
 
 }
