@@ -1,4 +1,4 @@
-<div class="p_article_lists" *ngFor="let eachArticle of articlesList">
+<div class="p_article_lists" *ngFor="let eachArticle of articlesList; let i = index" (click)="routeTo($event,i)">
 
   <div class="p_article_lists-img">
     <img [src]="_DomSanitizationService.bypassSecurityTrustUrl(eachArticle.articleImage)" />

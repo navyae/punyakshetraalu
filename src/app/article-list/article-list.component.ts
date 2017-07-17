@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {DomSanitizer} from "@angular/platform-browser";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-article-list',
@@ -7,11 +8,17 @@ import {DomSanitizer} from "@angular/platform-browser";
   styleUrls: ['./article-list.component.less']
 })
 export class ArticleListComponent implements OnInit {
-  @Input() articlesList: any
-  constructor(private _DomSanitizationService: DomSanitizer) { }
+  @Input() articlesList: any;
+  //@Output() onRoute: EventEmitter<any> = new EventEmitter();
+  constructor(private _DomSanitizationService: DomSanitizer, private router:Router) { }
 
   ngOnInit() {
-    console.log(this.articlesList);
+    //console.log(this.articlesList);
+  }
+
+  routeTo(e,index){
+    //console.log(e, index, this.articlesList[index].articleId);
+    this.router.navigate(['/stories',this.articlesList[index].articleId])
   }
 
 }
