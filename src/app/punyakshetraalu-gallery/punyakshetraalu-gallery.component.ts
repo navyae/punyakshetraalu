@@ -237,7 +237,6 @@ export class PunyakshetraaluGalleryComponent implements OnInit {
 
     var expandImage = this.render.createElement('div');
     expandImage.id='expandImage';
-    expandImage.style.display = 'inline-block';
     var imageTag = this.render.createElement('img');
     this.render.setAttribute(imageTag,'src', e.target.src);
     this.render.appendChild(expandImage, imageTag);

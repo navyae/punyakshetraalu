@@ -9,41 +9,79 @@
     padding-right: 20px;
   }
   &-tiles{
-    .createBox(100%, auto);
-    display: inline-block;
-    padding: 10px;
+    @media @mobile{
+      .createBox(100%, auto);
+      display: inline-block;
+    }
+    @media @tablet{
+      .createBox(100%, auto);
+      display: inline-block;
+      padding: 10px;
+    }
+
     &-wrapper{
-      .createBox(980px, auto);
+      @media @mobile{.createBox(320px, auto);}
+      @media @tablet{.createBox(760px, auto);}
+      @media @desktop-m{.createBox(980px, auto);}
+
       position: relative;
       margin: auto;
     }
     &-each{
+      @media @mobile{.createBox(300px, 300px);}
+      @media @tablet{.createBox(170px,170px);}
+      @media @desktop-m{.createBox(225px, 225px);}
       cursor: pointer;
-      .createBox(225px, 225px);
       background-color: @punyakshetraalu-brand;
       margin: 10px;
       float: left;
       img{
         .createBox(100%, 100%);
         &:hover{
-          -webkit-transition: all .3s ease-in;
-          -moz-transition: all .3s ease-in;
-          -ms-transition: all .3s ease-in;
-          -o-transition: all .3s ease-in;
-          transition: all .3s ease-in;
-          transform: scale(1.07);
-          -ms-transform: scale(1.07); /* IE 9 */
-          -webkit-transform: scale(1.07); /* Safari and Chrome */
+          @media @mobile{
+            -webkit-transition: all .3s ease-in;
+            -moz-transition: all .3s ease-in;
+            -ms-transition: all .3s ease-in;
+            -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+            transform: scale(1.2);
+            -ms-transform: scale(1.2); /* IE 9 */
+            -webkit-transform: scale(1.2); /* Safari and Chrome */
+          }
+          @media @tablet{
+            -webkit-transition: all .3s ease-in;
+            -moz-transition: all .3s ease-in;
+            -ms-transition: all .3s ease-in;
+            -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+            transform: scale(1.07);
+            -ms-transform: scale(1.07); /* IE 9 */
+            -webkit-transform: scale(1.07); /* Safari and Chrome */
+          }
+
         }
       }
     }
   }
 }
 #expandImage{
-  .createBox(100%, 550px);
+
+  @media @mobile{
+    display: none !important;
+  }
+  @media @tablet{
+    .createBox(100%, 550px);
+    display: inline-block;
+  }
+  @media @desktop-m{
+    .createBox(100%, 550px);
+    display: inline-block;
+  }
   margin: 5px 0;
   background-color: @punyakshetraalu-brand;
+  overflow: hidden;
   img{
     .createBox(100%, 100%);
+
   }
 }
