@@ -14,17 +14,36 @@
     padding: 10px;
     &-wrapper{
       .createBox(980px, auto);
+      position: relative;
       margin: auto;
     }
     &-each{
       cursor: pointer;
-      .createBox(200px, 200px);
+      .createBox(225px, 225px);
       background-color: @punyakshetraalu-brand;
       margin: 10px;
       float: left;
       img{
         .createBox(100%, 100%);
+        &:hover{
+          -webkit-transition: all .3s ease-in;
+          -moz-transition: all .3s ease-in;
+          -ms-transition: all .3s ease-in;
+          -o-transition: all .3s ease-in;
+          transition: all .3s ease-in;
+          transform: scale(1.07);
+          -ms-transform: scale(1.07); /* IE 9 */
+          -webkit-transform: scale(1.07); /* Safari and Chrome */
+        }
       }
     }
+  }
+}
+#expandImage{
+  .createBox(100%, 550px);
+  margin: 5px 0;
+  background-color: @punyakshetraalu-brand;
+  img{
+    .createBox(100%, 100%);
   }
 }

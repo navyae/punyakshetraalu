@@ -5,9 +5,10 @@
   </div>
   <div class="pg-tiles">
     <div class="pg-tiles-wrapper">
-      <div class = "pg-tiles-each" *ngFor=" let eImage of galleryImages">
+      <div class = "pg-tiles-each" *ngFor=" let eImage of galleryImages; let i = index" id = img-{{i}} (click)="expandImage($event, i)">
           <img [src]="_DomSanitizationService.bypassSecurityTrustUrl(eImage.galleryImage)"/>
       </div>
+      <!--<div class="pg-tiles-expand"></div>-->
     </div>
 
   </div>
