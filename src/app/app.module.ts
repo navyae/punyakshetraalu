@@ -16,15 +16,12 @@ import { PunyaBhagavadGitaComponent } from './punya-bhagavad-gita/punya-bhagavad
 import { PunyakshetraaluGalleryComponent } from './punyakshetraalu-gallery/punyakshetraalu-gallery.component';
 import { PunyaDropdownComponent } from './global/punya-dropdown/punya-dropdown.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { ArticlePageComponent } from './article-page/article-page.component';
 
 const punyaRoute: Routes = [
   {
     path: '',
     component: PunyakshetraaluHomeComponent
-  },
-  {
-    path: 'stories',
-    component: PunyaBlogComponent
   },
   {
     path: 'bhagavadgita',
@@ -37,7 +34,16 @@ const punyaRoute: Routes = [
   {
     path:'gallery',
     component: PunyakshetraaluGalleryComponent
+  },
+  {
+    path: 'stories',
+    component: PunyaBlogComponent
+  },
+  {
+    path:'stories/:id',
+    component:ArticlePageComponent
   }
+
 
 ]
 @NgModule({
@@ -54,6 +60,7 @@ const punyaRoute: Routes = [
     PunyaBhagavadGitaComponent,
     PunyakshetraaluGalleryComponent,
     PunyaDropdownComponent,
+    ArticlePageComponent,
   ],
   imports: [
     BrowserModule,
