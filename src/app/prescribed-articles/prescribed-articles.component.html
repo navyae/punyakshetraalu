@@ -1,0 +1,14 @@
+<div class="pa" *ngFor="let eachOtherArticle of otherArticles; let i = index">
+  <div class="pa-image">
+    <img [src]="_DomSanitizationService.bypassSecurityTrustUrl(eachOtherArticle.articleImage)" />
+  </div>
+  <div class="pa-text">
+    <div class="pa-text-title">
+      {{eachOtherArticle.articleTitle}}
+    </div>
+    <div class="pa-text-body">
+      {{eachOtherArticle.articleContent}}
+    </div>
+    <div class="pa-text-read_more"> Read More ...</div>
+  </div>
+</div>
