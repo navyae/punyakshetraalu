@@ -1,0 +1,65 @@
+@import (reference) "../../styles";
+
+.ap{
+  @media @mobile{
+
+  }
+  @media @tablet{
+
+  }
+  @media @desktop-m{
+    .createBox(100%, auto);
+    /deep/ .carouselImage{
+      height: auto;
+
+      img{
+        height: auto !important;
+        max-height: 500px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-left{
+    @media @mobile{
+
+    }
+    @media @tablet{
+
+    }
+    @media @desktop-m{
+     width: ~'calc(100% - 320px)';
+      padding: 20px;
+
+    }
+
+    &-content{
+      .createBox(100%, auto);
+      .universalFont(24px, 'Times New Roman', 400px, white);
+      padding: 10px;
+      margin: 10px 0;
+      text-align: justify;
+    }
+
+    &-other{
+      .createBox(100%, auto);
+      margin-top: 2px solid @punyakshetraalu-brand;
+    }
+  }
+  &-right{
+    @media @mobile{
+
+    }
+    @media @tablet{
+
+    }
+    @media @desktop-m{
+      .createBox(300px, auto);
+      background-color: white;
+      float: right;
+
+
+    }
+
+  }
+}

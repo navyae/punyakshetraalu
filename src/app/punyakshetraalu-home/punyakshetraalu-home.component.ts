@@ -32,7 +32,6 @@ export class PunyakshetraaluHomeComponent implements OnInit {
   }
 
   setElementImage(num) {
-    console.log(num, 'function' );
     this.render.setElementAttribute(document.getElementById('myImage'), 'src', this.p_carausel_images[num].src);
 
   }
