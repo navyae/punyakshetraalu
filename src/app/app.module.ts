@@ -19,6 +19,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { ArticlePageComponent } from './article-page/article-page.component';
 import { ArticleSwiperComponent } from './article-swiper/article-swiper.component';
 import { PrescribedArticlesComponent } from './prescribed-articles/prescribed-articles.component';
+import { PunyaFunLearnComponent } from './punya-fun-learn/punya-fun-learn.component';
+import { PunyaTilesComponent } from './global/punya-tiles/punya-tiles.component';
 
 const punyaRoute: Routes = [
   {
@@ -28,6 +30,10 @@ const punyaRoute: Routes = [
   {
     path: 'bhagavadgita',
     component: PunyaBhagavadGitaComponent
+  },
+  {
+    path: 'fun-to-learn',
+    component: PunyaFunLearnComponent
   },
   {
     path:'about',
@@ -65,6 +71,8 @@ const punyaRoute: Routes = [
     ArticlePageComponent,
     ArticleSwiperComponent,
     PrescribedArticlesComponent,
+    PunyaFunLearnComponent,
+    PunyaTilesComponent,
   ],
   imports: [
     BrowserModule,
