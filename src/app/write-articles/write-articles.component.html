@@ -1,0 +1,54 @@
+<div class="writeArticles">
+  <form [formGroup] = "articleForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label class="writeArticles-lbl"> Author </label>
+      <input
+        type="text"
+        id = "author"
+        formControlName="author"
+        class="form-control writeArticles-ip">
+    </div>
+    <div class="form-group">
+      <label class="writeArticles-lbl"> Title </label>
+      <input
+        type="text"
+        id = "title"
+        formControlName="title"
+        class="form-control writeArticles-ip">
+      <span *ngIf="!articleForm.get('title').valid && articleForm.get('title').touched" class="help-block"> Please enter a valid title! </span>
+    </div>
+
+    <div formArrayName="description">
+      <label class="writeArticles-lbl"> Description </label>
+
+      <div
+        class="form-group"
+        *ngFor="let descControl of articleForm.get('description').controls; let i = index">
+        <textarea type="text" class="form-control writeArticles-ip-desc" [formControlName]="i"></textarea>
+      </div>
+      <button class="btn btn-group-vertical writeArticles-imgbtn" type="button" (click)="onAddPara()"> Add Paragraph </button>
+
+    </div>
+
+   <!-- <div class="form-group">
+      <label class="writeArticles-lbl"> Description </label>
+      <textarea
+        id = "description"
+        formControlName="description"
+        class="form-control writeArticles-ip-desc">
+      </textarea>
+    </div>-->
+    <div formArrayName="articleImages">
+      <label class="writeArticles-lbl"> Article Inages </label>
+
+      <div
+        class="form-group"
+        *ngFor="let imageControl of articleForm.get('articleImages').controls; let i = index">
+        <input type="text" class="form-control writeArticles-ip" [formControlName]="i">
+      </div>
+      <button class="btn btn-group-vertical writeArticles-imgbtn" type="button" (click)="onAddImages()"> Add Images </button>
+
+    </div>
+    <button class="btn btn-primary writeArticles-submit" type="submit"> Submit </button>
+  </form>
+</div>

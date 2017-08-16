@@ -5,11 +5,10 @@ import { AppComponent } from './app.component';
 import { PunyakshetraaluHomeComponent } from './punyakshetraalu-home/punyakshetraalu-home.component';
 import { PunyakshetraaluAboutComponent } from './punyakshetraalu-about/punyakshetraalu-about.component';
 import { PunyakshetraaluContactComponent } from './punyakshetraalu-contact/punyakshetraalu-contact.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { PunyaBlogComponent } from './punya-blog/punya-blog.component';
 import {RouterModule, Routes} from '@angular/router';
 import { PunyakshetraaluFeatureComponent } from './punyakshetraalu-feature/punyakshetraalu-feature.component';
-import { SafePipePipe } from './safe-pipe.pipe';
 import { ImageCarouselComponent } from './image-carousel/image-carousel.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { PunyaBhagavadGitaComponent } from './punya-bhagavad-gita/punya-bhagavad-gita.component';
@@ -21,6 +20,8 @@ import { ArticleSwiperComponent } from './article-swiper/article-swiper.componen
 import { PrescribedArticlesComponent } from './prescribed-articles/prescribed-articles.component';
 import { PunyaFunLearnComponent } from './punya-fun-learn/punya-fun-learn.component';
 import { PunyaTilesComponent } from './global/punya-tiles/punya-tiles.component';
+import {ArticleServiceService} from "./services/article-service.service";
+import { WriteArticlesComponent } from './write-articles/write-articles.component';
 
 const punyaRoute: Routes = [
   {
@@ -30,6 +31,10 @@ const punyaRoute: Routes = [
   {
     path: 'bhagavadgita',
     component: PunyaBhagavadGitaComponent
+  },
+  {
+    path:'create',
+    component: WriteArticlesComponent
   },
   {
     path: 'fun-to-learn',
@@ -62,7 +67,6 @@ const punyaRoute: Routes = [
     PunyakshetraaluContactComponent,
     PunyaBlogComponent,
     PunyakshetraaluFeatureComponent,
-    SafePipePipe,
     ImageCarouselComponent,
     ArticleListComponent,
     PunyaBhagavadGitaComponent,
@@ -73,14 +77,16 @@ const punyaRoute: Routes = [
     PrescribedArticlesComponent,
     PunyaFunLearnComponent,
     PunyaTilesComponent,
+    WriteArticlesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(punyaRoute),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ArticleServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
