@@ -22,6 +22,7 @@ import { PunyaFunLearnComponent } from './punya-fun-learn/punya-fun-learn.compon
 import { PunyaTilesComponent } from './global/punya-tiles/punya-tiles.component';
 import {ArticleServiceService} from "./services/article-service.service";
 import { WriteArticlesComponent } from './write-articles/write-articles.component';
+import {HttpModule} from "@angular/http";
 
 const punyaRoute: Routes = [
   {
@@ -84,7 +85,8 @@ const punyaRoute: Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(punyaRoute),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpModule
   ],
   providers: [ArticleServiceService],
   bootstrap: [AppComponent]

@@ -6,12 +6,10 @@ export class ArticleServiceService {
 
   constructor(private _http:Http) { }
 
-  writeArticles(){
-    this._http.put('https://punyakshetraalu-e040d.firebaseio.com/articles.json', this.getArticleData());
+  writeArticles(d){
+    return this._http.put('https://punyakshetraalu-e040d.firebaseio.com/articles.json', d);
   }
 
-  getArticleData(){
-      return 'this is test';
-  }
+
 
 }
